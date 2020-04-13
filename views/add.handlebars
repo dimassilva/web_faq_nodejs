@@ -1,0 +1,40 @@
+<div id="add-form-container" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Cadastre um novo erro</h1>
+            </div>
+            <div id="form-box" class="col-md-12">
+                <h2>Preencha com a maior quantidade de detalhes possível.</h2>
+                <form action="/faqs/add" method="POST">
+                    <div class="form-group">
+                        <label for="titulo>">Título do erro:</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o título do erro" required>
+                        <small id="titleHelp" class="form-text text-muted">O título é muito importante.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao>">Descrição do erro:</label>
+                        <textarea type="text" class="form-control" id="descricao" name="descricao" placeholder="Digite a descrição do erro" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="solucao>">Solução do Problema:</label>
+                        <textarea type="text" class="form-control" id="solucao" name="solucao" placeholder="Digite a solução encontrada para este problema" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="servico>">Tipo de serviço:</label>
+                        <select  class="form-control" id="servico" name="servico" required>
+                            <option selected>Selecione o tipo de serviço</option>
+                            <option value="TV">TV</option>
+                            <option value="Telefonia">Telefonia</option>
+                            <option value="Internet">Internet</option>
+                          </select>
+                    </div>
+                    <input type="hidden" name="novo" value="1">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>

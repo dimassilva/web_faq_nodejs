@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg mavbar-light bg-light">
+            <a class="navbar-brand" href="index.html">FAQ LPNet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ver Faqs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="add.html">Novo cadastro</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <div id="top-container" class="container-fluid">
+        <h1 id="main-title" class="text-center">Perguntas frequentes TI</h1>
+        <p id="main-subtitle" class="text-center">Encontre os registros de soluções para problemas frequentes do TI</p>
+        <form id="search-form" class="form-inline" action="">
+            <div class="form-group col-md-10">
+                <input type="text" class="form-control" id="faq" name="faq" placeholder="Digite o erro a ser pequisado">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary">Pesquisar</button>
+            </div>
+        </form>
+    </div>
+    <main>
+        <div id="faqs-container" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="faq-list-title">Veja os erros adicionados</h2>
+                    <ul id="faq-list" class="list-group">
+                        {{#each faqs}}
+                        <li class="list-group-item new-faq">
+                            <img src="/img/servico.svg" alt="Tipo de serviço">
+                            <p>{{dataValues.servico}}</p>
+                            <h2>{{dataValues.titulo}}</h2>
+                            <p>{{dataValues.solucao}}</p>
+                            <span class="new-faq-label">Novo</span>
+                            <a class="btn btn-primary">Detalhes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
